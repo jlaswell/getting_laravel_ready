@@ -1,0 +1,229 @@
+@import "reset";
+
+html {
+  font-size: 14px;
+  background-color: transparent;
+}
+
+h1 {
+  color:#fff;
+}
+
+h2 {
+  color: #fff;
+  border-bottom-color: rgba(223, 188, 105, 0.48);
+  margin-bottom: 0.24em;
+}
+
+h3 {
+  color:#fff;
+}
+
+pre {
+  border-color:#ccc;
+}
+
+code {
+  color:#ddd;
+}
+
+blockquote {
+  font-size:2em;
+  font-style:italic;
+  padding:1em 2em;
+  color:#fff;
+  border-left:5px solid #ccc;
+
+  p {
+    margin:0;
+  }
+
+  cite {
+    font-size:.5em;
+    font-style:normal;
+    font-weight:bold;
+    color:#ddd;
+  }
+}
+
+::-moz-selection{ background:#c00; color:#fff; }
+::selection { background:#c00; color:#fff; }
+
+a {
+  &, &:hover, &:focus, &:active, &:visited {
+    color:#FFFEDF;
+    text-decoration:none;
+  }
+
+  &:hover, &:focus {
+    text-decoration:underline;
+  }
+}
+
+.deck-container {
+  font-family: Hind, "Helvetica Neue", sans-serif;
+  font-size:1.75em;
+  background: #2A2C31;
+  color: #fff;
+
+  > .slide {
+    padding:0 48px;
+  }
+}
+
+.deck-container {
+  > .slide.slide-title:before {
+    content: "";
+    position: fixed;
+    top: -12px;
+    left: -12px;
+    // bottom: 0;
+    z-index: 1;
+
+    display: block;
+    background-image: url('../../../../cityscape.jpg');
+    background-size: 1400px 900px;
+    // max-width: 150%;
+    width: 1400px;
+    height: 900px;
+
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+  }
+  > .slide.slide-title {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 0;
+    .title {
+      z-index: 9999;
+      width: 76%;
+      position: absolute;
+      height: 100%;
+      bottom: 10%;
+      top: auto;
+      h1 {
+        background-color: rgba(16, 16, 16, 0.24);
+        position: relative;
+        top: none;
+        bottom: none;
+        left: none;
+        right: none;
+        text-align: left;
+      }
+      h1.subtitle {
+        color: #fafafa;
+        font-weight: 300;
+        font-size: 1.92em;
+        position: relative;
+        margin-top: -1.44em;
+        background-color: transparent;
+        // left: 1.20em;
+        // right: none;
+      }
+    }
+  }
+}
+
+.slide {
+  .deck-before, .deck-previous {
+    opacity:0.4;
+
+    &:not(.deck-child-current) {
+      .deck-before, .deck-previous {
+        opacity:1;
+      }
+    }
+  }
+
+  .deck-child-current {
+    opacity:1;
+  }
+}
+
+.deck-prev-link, .deck-next-link {
+  background:#ccc;
+  font-family:serif;
+
+  &, &:hover, &:focus, &:active, &:visited {
+    color:#fff;
+  }
+
+  &:hover, &:focus {
+    background:#c00;
+    text-decoration:none;
+  }
+}
+
+.deck-status {
+  font-size:0.6666em;
+}
+
+.deck-menu {
+  .slide {
+    background:#eee;
+  }
+
+  .deck-current, .no-touch & .slide:hover {
+    background:#ddf;
+  }
+}
+
+.laravel {
+  color: #f4645f;
+}
+
+.daytoday {
+  color: #E74C3C !important;
+}
+
+.twitter {
+  color: #55ACEE !important;
+}
+
+.circle {
+  display: inline-block;
+  clip-path: circle(50px);
+  -webkit-clip-path: circle(107px);
+  width: 213px;
+}
+
+#introduction-slide {
+  .left {
+    width: 48%;
+    float: left;
+  }
+  .right {
+    width: 48%;
+    float: right;
+  }
+}
+
+#prep-answer-slide {
+  h1 {
+    font-size: 3em;
+    
+    position: absolute;
+    top: 40%;
+  }
+  h3 {
+    padding: 0.48em 1.96em;
+    margin: 0 48px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.12);
+  }
+}
+
+body {
+  color: #fff;
+}
